@@ -14,19 +14,43 @@ import {
   FormControl,
   FormHelperText,
   InputRightElement,
+  useToast,
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const toast = useToast();
+  const[data,setdata]=useState({
+    email:"",
+    passwor:""
+  })
     const navigate = useNavigate();
     const HandleSignIn = () => {
+     const{email,password}=data;
+     if(email==""||!email.includes("@gmail")){
+      return toast({
+        title: "fill valid email",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+     }
+      if(!password||password.length<=0){
+      return toast({
+        title: "fill valid password",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+     }
     navigate("/home");
   };
   return (
     <Flex
       flexDirection="column"
-      width="76%"
+    
+      className="form"
       borderRadius={10}
       backgroundColor="white"
       justifyContent="center"
@@ -49,13 +73,13 @@ const Form = () => {
               <FormControl>
                 <Box mb={"5px"}>Email address</Box>
                 <InputGroup>
-                  <Input type="email" placeholder="Johndoe@gmail.com" />
+                  <Input type="email"name="email" placeholder="Johndoe@gmail.com" onChange={(e)=>setdata({...data,[e.target.name]:e.target.value})} />
                 </InputGroup>
               </FormControl>
               <FormControl>
                 <Box mb={"5px"}>Password</Box>
                 <InputGroup>
-                  <Input type="password" placeholder="Password" />
+                  <Input type="password" name="password"placeholder="Password" onChange={(e)=>setdata({...data,[e.target.name]:e.target.value})}/>
                 </InputGroup>
                 <FormHelperText textAlign="left">
                   <Link color={"#605BFF"}>forgot password?</Link>

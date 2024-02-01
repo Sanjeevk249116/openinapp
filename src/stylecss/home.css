@@ -31,6 +31,13 @@
   gap: 14px;
   margin-bottom: 38px;
 }
+.main11 {
+  display: flex;
+  color: #9a9aa9;
+  gap: 14px;
+  margin-bottom: 20px
+  
+}
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 .main1 > div:nth-child(2) {
   font-family: Nunito;
@@ -61,7 +68,7 @@
 .mainPart{
  padding: 50px 30px;
  background-color: #f8faff;
- margin-bottom: 144px;
+ padding-bottom: 144px;
 }
 .navbar{
 display: flex;
@@ -79,6 +86,15 @@ margin-bottom: 137px;
     letter-spacing: 0px;
     text-align: left;
     
+}
+.csv{
+  font-family: Figtree;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .right_part{
@@ -221,4 +237,129 @@ select{
 }
 .span_less{
   background-color: white;
+}
+.value{
+  border-radius: 50px;
+  display: flex;
+  gap: 10px;
+  
+}
+.value img{
+width: 26%;
+}
+.value>span{
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media screen and (max-width:1400px) {
+  .home{
+    grid-template-columns: 18.5% auto;
+  }
+  .drop_part{
+    width: 49%;
+    margin: auto;
+    margin-bottom: 48px;
+  }
+  .inerPart{
+    padding: 98px 84px 84px 77px;
+   
+  }
+}
+@media screen and (max-width:1250px) {
+  
+  .navbar{
+    width: 95%;
+  }
+}
+@media screen and (max-width:1170px) {
+  
+  .navbar{
+    width: 90%;
+  }
+  
+}
+@media screen and (max-width:1100px) {
+  
+  .navbar{
+    width: 80%;
+  }
+.drop_part{
+  margin-left: 13%;
+}
+}
+@media screen and (max-width:1000px) {
+  
+  .navbar{
+    width: 70%;
+  }
+.drop_part{
+  margin-left: 11%;
+}
+}
+@media screen and (max-width:900px) {
+  
+  .navbar{
+    width: 60%;
+  }
+.drop_part{
+  margin-left: 7%;
+}
+}
+@media screen and (min-width:900px) {
+  .optional{
+  display: none;
+  }
+  .csv{
+    display: none;
+  }
+  .value{
+    display: none;
+  }
+}
+@media screen and (max-width:900px) {
+  .uploads{
+    display: none;
+  }
+ .sidebar{
+  display: none;
+ }
+ .navbar>div:nth-child(1){
+  display: none;
+ }
+ .home{
+  display: block;
+ }
+ .optional{
+  width: 100%;
+ }
+ .drop_part{
+  margin-left: 0%;
+  width: 100%;
+ }
+ .navbar{
+  width: 100%;
+  margin-bottom: 55px;
+ }
+}
+@media screen and (max-width:500px) {
+  .inerPart {
+    padding: 72px 50px 71px 42px;
+}
+}
+@media screen and (max-width:450px) {
+  .inerPart {
+    padding: 72px 22px 71px 12px;
+}
+}
+@media screen and (max-width:380px) {
+  .inerPart {
+    padding: 52px 10px 51px 2px;
+}
+}
+@media screen and (max-width:350px) {
+  .inerPart {
+    padding: 52px 10px 51px 42px;
+}
 }
