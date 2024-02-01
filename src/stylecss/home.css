@@ -61,7 +61,7 @@
 .mainPart{
  padding: 50px 30px;
  background-color: #f8faff;
- height: 1024px;
+ margin-bottom: 144px;
 }
 .navbar{
 display: flex;
@@ -100,11 +100,33 @@ margin-bottom: 137px;
     background-color: white;
     padding: 16px;
     margin-left: 270px;
+    margin-bottom: 104px;
 }
 .inerPart{
  border: 1px dashed gray;
- border-radius: 4px; 
- padding: 98px 148px 84px 148px;  
+ border-radius: 6px; 
+ padding: 98px 148px 84px 148px;
+ display: flex;
+ justify-content: center; /* Center horizontally */
+ align-items: center; /* Center vertically */  
+}
+.inerPart>div>img{
+  width: 36px;
+margin-left: 40%;
+ 
+}
+.inerPart p{
+  margin-top: 11px;
+}
+.browser{
+  color: #605BFF;
+}
+.remove{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .btn1{
     color: white;
@@ -119,6 +141,84 @@ margin-bottom: 137px;
     border-radius: 10px;
     padding: 16px 0px;
 }
-.btn1 span{
+.btn1 >span{
+  display: flex;
  margin-right: 5px;
+}
+.up{
+  
+ margin-top: -4px;
+ margin-left: 5px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+.uploads{
+  padding-left: 54px;
+}
+.uploads>div:first-child{
+ 
+font-family: Figtree;
+font-size: 24px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: left;
+margin-bottom: 46px;
+}
+.tableMain{
+  padding: 16px;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+}
+thead{
+  margin-bottom: 15px;
+}
+thead>tr>th:nth-child(1){
+  padding-right: 60px;
+}
+thead>tr>th:nth-child(2){
+  padding-right: 150px;
+}
+thead>tr>th:nth-child(3){
+  padding-right: 150px;
+}
+thead>tr>th:nth-child(4){
+  padding-right: 150px;
+}
+thead>tr>th:nth-child(5){
+  padding-right: 150px;
+ 
+}
+
+.body1{
+  
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.body1>div:nth-child(3){
+  margin-left: -2%;
+}
+select{
+  border: 1px solid #F5F5F5;
+  border-radius: 10px;
+  padding: 5px 20px 5px 10px;
+}
+.body1>div:nth-child(2){
+  color: #605BFF;
+}
+.body1 span{
+  margin-right: 10px;
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+  background-color: #605BFF;
+  margin-top: 3px;
+  padding-top: 7px;
+}
+.span_less{
+  background-color: white;
 }

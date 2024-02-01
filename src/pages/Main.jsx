@@ -1,7 +1,62 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { FaRegBell } from 'react-icons/fa'
 import { HiOutlineUpload } from "react-icons/hi";
+import {useDropzone} from 'react-dropzone'
+import { Spinner, useToast } from '@chakra-ui/react';
+import Tables from './Tables';
+
 function Main() {
+  const toast = useToast();
+  const[num,setNumber]=useState(0)
+  const[isLoading,setIsLoading]=useState(false)
+  const onDrop = useCallback(acceptedFiles => {
+    // Do something with the files
+    setIsLoading(true)
+     setTimeout(() => {
+     
+      setNumber(1)
+      setIsLoading(false)
+      toast({
+        title: "Upload excel file",
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+    }, 3000);
+    
+    
+
+  }, [])
+
+  useEffect(()=>{
+  if(num>0){
+    setTimeout(() => {
+      setNumber(0)
+      setIsLoading(false)
+      toast({
+       title: "Upload in dataBase",
+       status: "success",
+       duration: 2000,
+       isClosable: true,
+     });
+    }, 5000);
+   }
+  
+  },[num])
+  const removeVal=()=>{
+    setIsLoading(true)
+    setTimeout(() => {
+    setNumber(0)
+     setIsLoading(false)
+     toast({
+      title: "remove excel file",
+      status: "error",
+      duration: 2000,
+      isClosable: true,
+    });
+   }, 2000);
+  }
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
   return (
     <div className='mainPart'>
    <div className='navbar'>
@@ -19,10 +74,29 @@ function Main() {
    </div>
    <div className='drop_part'>
     <div className='inerPart'>
-        <img src="https://i.ibb.co/pzLQHXG/uploader.png" alt="uploader" />
+       <div>
+       <img src="https://i.ibb.co/TYmfqfV/exelsheet.png" alt="uploader" />
+       {num>0?<><p>Upload-template-xlsx</p>
+       <p className='remove' onClick={removeVal}>Remove</p></>:
+       <p>Drop your excel sheet or{" "} <span className='browser'>Browser</span></p>}
+       </div>
     </div>
-    <button className='btn1'> <span><HiOutlineUpload /></span>Upload</button>
+    <div {...getRootProps()}>
+  <input {...getInputProps()} />
+  {isDragActive ? (
+    <p>Drop the files here ...</p>
+  ) : (
+    <button className='btn1'>{isLoading ? <Spinner
+      thickness='3px'
+      speed='0.65s'
+      emptyColor='gray.200'
+      color='blue.500'
+      size='sm'
+    /> : <span><HiOutlineUpload /><span className='up'>Upload</span></span>}</button>
+  )}
+</div>
    </div>
+   <Tables/>
     </div>
   )
 }
