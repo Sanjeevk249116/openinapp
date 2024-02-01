@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.home {
+  display: grid;
+  grid-template-columns: 218px 1222px;
+}
+.sidebar {
+  padding: 51px 31px;
+}
+
+.sidebar div > img {
+  width: 42px;
+}
+.sidebar > div:nth-child(1) {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.sidebar > div:nth-child(1) > p {
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 4px;
+}
+.main1 {
+  display: flex;
+  color: #9a9aa9;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+.main1 > div:nth-child(2) {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: -2px;
+}
+.main2{
+    background-color: blue;
+    border-radius: 3px;
+    
+}
+.upload{
+    color: #605BFF;
+
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+
+.mainPart{
+ padding: 50px 30px;
+ background-color: #f8faff;
+ height: 1024px;
+}
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+margin-bottom: 137px;
+}
+.navbar>div:first-child>p{
+   
+    font-family: Figtree;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    
+}
+
+.right_part{
+    display: flex;
+    gap: 28px;
+}
+.right_part>div:nth-child(2){
+    width: 42px;
+    border-radius: 40px;
+}
+.right_part>div:nth-child(2)>img{
+    
+    border-radius: 40px;
+}
+
+.drop_part{
+    width: 596px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 16px;
+    margin-left: 270px;
+}
+.inerPart{
+ border: 1px dashed gray;
+ border-radius: 4px; 
+ padding: 98px 148px 84px 148px;  
+}
+.btn1{
+    color: white;
+    width: 100%;
+    margin: auto;
+    margin-top:13px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #605BFF;
+    border-radius: 10px;
+    padding: 16px 0px;
+}
+.btn1 span{
+ margin-right: 5px;
+}
