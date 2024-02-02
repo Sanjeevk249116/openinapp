@@ -1,19 +1,19 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import Form from "./Form";
-// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-// import auth from "../components/FireBaseData";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {auth} from "../components/FireBaseData";
 import { useNavigate } from "react-router-dom";
 import { FaApple } from "react-icons/fa";
 function Section2() {
   const navigate = useNavigate();
-  // const provider = new GoogleAuthProvider();
+  const provider = new GoogleAuthProvider();
 
-  // const signInWithGoogle = () => {
-  //   signInWithPopup(auth, provider).then((result) => {
-  //     navigate("/home");
-  //   });
-  // };
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      navigate("/home");
+    });
+  };
   return (
     <>
       <div className="topp">
@@ -26,7 +26,7 @@ function Section2() {
           <p>Sign in to your account</p>
         </div>
         <div className="auth">
-          <div className="google">
+          <div className="google" onClick={signInWithGoogle}>
             <div>
               <FcGoogle />
             </div>
