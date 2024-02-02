@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 .home {
   display: grid;
@@ -17,7 +18,7 @@
   margin-bottom: 50px;
 }
 .sidebar > div:nth-child(1) > p {
-  font-family: Nunito;
+   font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 33px;
@@ -40,7 +41,7 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 .main1 > div:nth-child(2) {
-  font-family: Nunito;
+   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
@@ -56,7 +57,7 @@
 .upload{
     color: #605BFF;
 
-    font-family: Nunito;
+     font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;

@@ -93,6 +93,7 @@
 .google > div:nth-child(2) {
   margin-top: -5px;
   margin-left: 6px;
+  font-weight: 100;
 }
 
 .part{
@@ -161,10 +162,20 @@
   .topp{
     display: none;
   }
+ 
 }
 @media screen and (max-width: 800px) {
 .section1_top{
   display: none;
+}
+.topp img{
+  width: 13%;
+}
+.topp>span{
+  margin-top: 10px;
+}
+.topp{
+  padding: 15px 8px;
 }
 .section2_top{
   padding: 26px;
@@ -220,6 +231,7 @@
   padding:9px 2px 9px 5px;
   height: 36px;
   font-size: 15px;
+  cursor: pointer;
 }
 }
 @media screen and (max-width: 450px) {
