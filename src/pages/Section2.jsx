@@ -4,6 +4,7 @@ import Form from "./Form";
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // import auth from "../components/FireBaseData";
 import { useNavigate } from "react-router-dom";
+import { FaApple } from "react-icons/fa";
 function Section2() {
   const navigate = useNavigate();
   // const provider = new GoogleAuthProvider();
@@ -33,7 +34,7 @@ function Section2() {
           </div>
           <div className="google">
             <div>
-              <FcGoogle />
+            <FaApple />
             </div>
             <div>Sign in with Apple</div>
           </div>
