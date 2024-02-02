@@ -2,7 +2,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import Form from "./Form";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import {auth} from "../components/FireBaseData";
+import { auth } from "../components/FireBaseData";
 import { useNavigate } from "react-router-dom";
 import { FaApple } from "react-icons/fa";
 function Section2() {
@@ -30,11 +30,11 @@ function Section2() {
             <div>
               <FcGoogle />
             </div>
-            <div >Sign in with Google</div>
+            <div>Sign in with Google</div>
           </div>
           <div className="google">
             <div>
-            <FaApple />
+              <FaApple />
             </div>
             <div>Sign in with Apple</div>
           </div>

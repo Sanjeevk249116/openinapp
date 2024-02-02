@@ -21,35 +21,34 @@ import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const toast = useToast();
-  const[data,setdata]=useState({
-    email:"",
-    passwor:""
-  })
-    const navigate = useNavigate();
-    const HandleSignIn = () => {
-     const{email,password}=data;
-     if(email==""||!email.includes("@gmail")){
+  const [data, setdata] = useState({
+    email: "",
+    passwor: "",
+  });
+  const navigate = useNavigate();
+  const HandleSignIn = () => {
+    const { email, password } = data;
+    if (email == "" || !email.includes("@gmail")) {
       return toast({
         title: "fill valid email",
         status: "error",
         duration: 2000,
         isClosable: true,
       });
-     }
-      if(!password||password.length<=0){
+    }
+    if (!password || password.length <= 0) {
       return toast({
         title: "fill valid password",
         status: "error",
         duration: 2000,
         isClosable: true,
       });
-     }
+    }
     navigate("/home");
   };
   return (
     <Flex
       flexDirection="column"
-    
       className="form"
       borderRadius={10}
       backgroundColor="white"
@@ -63,7 +62,7 @@ const Form = () => {
         alignItems="center"
       >
         <Box minW={{ base: "auto", md: "422.64px" }}>
-          <form >
+          <form>
             <Stack
               spacing={4}
               p="2rem"
@@ -73,13 +72,27 @@ const Form = () => {
               <FormControl>
                 <Box mb={"5px"}>Email address</Box>
                 <InputGroup>
-                  <Input type="email"name="email" placeholder="Johndoe@gmail.com" onChange={(e)=>setdata({...data,[e.target.name]:e.target.value})} />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Johndoe@gmail.com"
+                    onChange={(e) =>
+                      setdata({ ...data, [e.target.name]: e.target.value })
+                    }
+                  />
                 </InputGroup>
               </FormControl>
               <FormControl>
                 <Box mb={"5px"}>Password</Box>
                 <InputGroup>
-                  <Input type="password" name="password"placeholder="Password" onChange={(e)=>setdata({...data,[e.target.name]:e.target.value})}/>
+                  <Input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={(e) =>
+                      setdata({ ...data, [e.target.name]: e.target.value })
+                    }
+                  />
                 </InputGroup>
                 <FormHelperText textAlign="left">
                   <Link color={"#605BFF"}>forgot password?</Link>
@@ -87,8 +100,7 @@ const Form = () => {
               </FormControl>
               <Button
                 borderRadius={10}
-                onClick={(e)=>HandleSignIn(e)}
-               
+                onClick={(e) => HandleSignIn(e)}
                 variant="solid"
                 backgroundColor="#605BFF"
                 width="full"
@@ -101,7 +113,6 @@ const Form = () => {
         </Box>
       </Stack>
     </Flex>
-    
   );
 };
 
