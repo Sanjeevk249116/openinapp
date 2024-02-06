@@ -6,17 +6,13 @@ import {
   Button,
   InputGroup,
   Stack,
-  InputLeftElement,
-  chakra,
+ 
   Box,
   Link,
-  Avatar,
   FormControl,
   FormHelperText,
-  InputRightElement,
-  useToast,
+ useToast,
 } from "@chakra-ui/react";
-import { FaUserAlt, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {

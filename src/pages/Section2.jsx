@@ -14,6 +14,7 @@ function Section2() {
       navigate("/home");
     });
   };
+  
   return (
     <>
       <div className="topp">
